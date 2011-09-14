@@ -49,3 +49,21 @@ table {
 
 /* Add Styles Here */
 body { font-family:Times; font-size:14px; }
+
+header {
+	height:100px;
+	background-color:#0FF;
+}
+
+header h1 {background-color:#999999; text-align:center; padding:30px; font-size:20px; }
+
+section {margin-top:10px; }
+
+section h2 {font-size:16px; }
+
+p {font-size:14px; line-height:18px;}
+	
+footer {background-color:#669999; font-size:30px; padding:30px 10px;}
+
+#sidebar h3 {font-size:14px; padding-bottom:5px;}
+#sidebar ul {list-style-type:square; text-indent:2px; margin-left:20px;}
