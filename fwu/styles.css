@@ -38,29 +38,32 @@
 
 #announcements {
 	border: 1px solid #06C;
-	padding: 5px;
 	margin-top: 5px;
 	margin-right: -1px;
 	margin-bottom: 5px;
 	margin-left: -1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 #events {
 	border: 1px solid #06C;
-	padding: 5px;
 	margin-top: 5px;
 	margin-right: -1px;
 	margin-bottom: 5px;
 	margin-left: -1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 #facebook {
 	border: 1px solid #06C;
-	padding: 5px;
 	margin-top: 5px;
 	margin-right: -1px;
 	margin-bottom: 5px;
 	margin-left: -1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 
