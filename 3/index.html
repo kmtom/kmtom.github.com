@@ -9,29 +9,35 @@
   <link href="styles.css" rel="stylesheet" type="text/css" /> -->
   </head>
   <body>
-   <header>
-     <h1 id="logo"><span>Dogs vs Cats</span></h1>
+   <header id="page-header">
+     <a href="#"><h1 id="logo"><span>Dogs vs Cats</span></h1></a>
      <nav id="main-nav">
-      <a href="#">Photos</a> &bull; <a href="#">About</a> &bull; <a href="#">Submit</a> &bull; <a href="#">Blog</a> &bull; <a href="#">Contact</a>
+      <ul>
+       <li> <a href="#">Photos</a></li>
+       <li><a href="#">About</a></li>
+       <li><a href="#">Submit</a></li>
+       <li><a href="#">Blog</a></li>
+       <li><a href="#">Contact</a></li>
+      </ul>
      </nav>
    </header>
 
-   <section id="dog">
+   <section class="content-sect" id="dog">
     <img src="images/dog.jpg" width="300" alt="A cute puppy." />
     <h1>Dogs Have Better Noses</h1>
     <p>Dogs can discriminate odors at concentrations nearly 100 million times lower than humans can. The wet nose is essential for determining the direction of the air current containing the smell. Cold receptors in the skin are sensitive to the cooling of the skin by evaporation of the moisture by air currents.</p>
    </section>
 
-   <section id="cat">
+   <section class="content-sect" id="cat">
     <img src="images/cat.gif" width="300" alt="A scary cat." />
     <h1>Cats Have Better Tongues</h1>
     <p>Cats are known for their cleanliness, spending many hours licking their coats. The cat's tongue has backwards-facing spines about 500 micrometers long, which are called papillae. These are quite rigid, as they contain keratin. These spines allow cats to groom themselves by licking their fur, with the rows of papillae acting like a hairbrush. </p>
    
    </section>
 
-   <footer>
-    <span id="credit">images and copy from <a href="#">wiki commons</a></span>
-    <span id="copyright">copyright &copy;2011 <a href="#">martha rettig</a></span>
+   <footer id="page-footer">
+    <div id="credit">images and copy from <a href="#">wiki commons</a></div>
+    <div id="copyright">copyright &copy;2011 <a href="#">martha rettig</a></div>
    
    </footer>
 
