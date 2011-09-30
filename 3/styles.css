@@ -8,28 +8,30 @@ body {
 }
 
 
-header {
+#page-header {
 	height:135px;
 	text-align:center;
 }
 
-header h1 {
+#page-header h1 {
 	background-image: url(images/dogvscat-logo.gif);
 	height: 95px;
 	width: 445px;
 	background-repeat: no-repeat;
-	margin-top: 0;
-	position: absolute;
+	margin:0 auto;
 	}
-header h1 span {
+#page-header h1 span {
 	position: absolute;
         left: -999em;
 	}
 
-nav {
+
+#main-nav {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:20px;
 	text-transform: uppercase;
-	margin-top:100px;
+	margin-top:10px;
+	padding-top:3px;
 	border-top-width: 2px;
 	border-bottom-width: 2px;
 	border-top-style: solid;
@@ -39,21 +41,40 @@ nav {
 	position:absolute;
 	width:700px;
 	text-align:center;
-	height:20px;
+	height:24px;
 }
 
-nav a{
+#main-nav a{
 	text-decoration:none;
 	color:#000;
 }
 
-section {
+
+#main-nav li{
+	display:inline;
+	
+}
+
+li.separator {
+	background-image: url(images/bullet.png);
+	background-repeat: no-repeat;
+	background-position:center center;
+	padding-top: 0;
+	padding-right: 10px;
+	padding-bottom: 0;
+	padding-left: 12px;
+}
+
+
+.content-sect {
 	width:300px;
-	margin-top: 10px;
+	margin-top: 15px;
 	margin-right: 25px;
 	margin-bottom: 20px;
 	margin-left: 25px;
 }
+
+
 
 #dog {
 	float:left;
@@ -63,14 +84,14 @@ section {
 	float:right;
 }
 
-section h1{
+.content-sect h1{
 	font-size:20px;
 	padding:10px 0;
 	
 }
 
 
-footer {
+#page-footer {
 	clear:both;
 	border-top-width: 2px;
 	border-top-style: solid;
@@ -81,12 +102,16 @@ footer {
 	padding-left: 25px;
 	font-size:12px;
 }
-footer a{
+#page-footer a{
 	text-decoration:none;
 	
 }
 
-footer #copyright{
+#page-footer #credit{
+	float:left;
+	
+}
+#page-footer #copyright {
 	float:right;
 	
 }
