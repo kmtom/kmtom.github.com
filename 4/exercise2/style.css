@@ -50,3 +50,84 @@ table {
 	border-spacing: 0;
 }
 
+/* start of le mine */
+
+body {
+	font-family:Tahoma;
+	font-size:14px;
+}
+
+h1 {font-size:20px;}
+
+h2 {font-size:18px;}
+
+h3 {font-size:16px;}
+
+
+
+
+
+
+
+#site-wrapper {
+		
+}
+
+#site-header {
+	
+}
+
+#top-nav {
+	
+}
+
+#menu-wrapper {
+	
+}
+
+#main-menu {
+	
+}
+
+/* end of head styles */
+
+#content-wrapper {
+	
+}
+
+#content {
+	
+}
+
+
+#page {
+	float:left;
+}
+
+
+/*start of left side */
+
+#sidebar {
+	float:right;
+}
+
+
+
+
+/*start of footer wrapper*/
+
+#footer-wrapper {
+	clear:both;
+}
+
+#site-footer {
+	
+}
+
+#footer-contact {
+	
+}
+
+#footer-follow {
+	
+}

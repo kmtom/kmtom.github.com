@@ -52,19 +52,11 @@ body {
 
 #main-nav li{
 	display:inline;
-	
-}
-
-li.separator {
 	background-image: url(images/bullet.png);
 	background-repeat: no-repeat;
-	background-position:center center;
-	padding-top: 0;
-	padding-right: 10px;
-	padding-bottom: 0;
-	padding-left: 12px;
+	background-position:right center;
+	padding:0 15px 0 2px;
 }
-
 
 .content-sect {
 	width:300px;
