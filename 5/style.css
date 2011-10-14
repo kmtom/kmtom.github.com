@@ -46,3 +46,100 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+ 
+ /* my stles here: */
+ 
+body {
+	width:960px;
+	margin:0 auto;
+	font-family: 'Andada', serif;
+	font-size:14px;
+	background-color:#F7F3E8;
+	color:#2B3E42;
+}
+ 
+
+
+h1 {font-family: 'Cabin Sketch', cursive;}
+ 
+header h1 {
+	font-family: 'VT323', cursive;
+	font-size:30px;
+	color:#77BED2;
+	padding:20px 10px 10px 10px;
+}
+
+nav {
+	background-color:#F2583E;
+	height:30px;
+}
+
+
+
+nav li {
+	float:left;
+
+}
+
+nav li a{
+	display:inline-block;
+	padding:7px 10px;
+	font-size:16px;
+	text-decoration:none;
+	color:#D5E1DD;
+}
+nav li a:hover {
+	color:#2B3E42;
+}
+
+#content {
+	float:left;
+	width:580px;
+	padding:10px 0 10px 15px;
+}
+
+#content h1 {
+	font-size:22px;
+	padding:10px 0 5px 0;
+}
+
+#content p {
+	padding:3px 0;
+	line-height:15px;
+	
+}
+
+#sidebar {
+	float:right;
+	width:320px;
+	padding: 15px 10px 10px 0px;
+	color:#747E80;
+	
+}
+
+#sidebar h1 {
+	font-size:18px;
+	padding:5px 0;
+}
+
+#sidebar p {
+	line-height:15px;
+	font-size:13px;
+	
+}
+
+footer {
+	clear:both;
+	background-color:#F2583E;
+	padding-left:10px;
+	text-align:center;
+	color:#77BED2;
+	height:35px;
+	padding-top:20px;
+}
+
+footer a {
+	color:#77BED2;
+	font-size:15px;
+	text-decoration:none;
+}
