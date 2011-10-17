@@ -14,15 +14,26 @@ body {
 }
 
 #page-header h1 {
-	background-image: url(images/dogvscat-logo.gif);
+
+	font-family: "LeagueGothicRegular", Arial, sans-serif;
+	font-size:80px;
 	height: 95px;
 	width: 445px;
 	background-repeat: no-repeat;
 	margin:0 auto;
+	text-transform:uppercase;
 	}
+
+#page-header a {
+	color:black;
+	text-decoration:none;
+	
+}
+
 #page-header h1 span {
-	position: absolute;
-        left: -999em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: 300;
+	font-size:30px;
 	}
 
 
