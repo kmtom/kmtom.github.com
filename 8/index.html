@@ -17,13 +17,54 @@
      	
 		
 		
-		$("#feed-name").text(username + "'s Twitter feed.");
+		$("#feed-name").text(username + "'s feed.");
         
 		$.each(data,function(idx) {
        
-	   	$("<div class='.tweet'> </div>").text(this.text).appendTo("#feed");
-		
-		$("<div class='.date'> </div>").text(this.created_at).appendTo("#feed");
+		/*this adds links to the hashtags and @ mentions */   
+						 /*
+				 * Twita@talinkahashifyer
+				 * http://www.dustindiaz.com
+				 * http://www.dustindiaz.com/basement/ify.html
+				 *
+				 * Copyright (c) 2009 Dustin Diaz
+				 * licensed under public BSD
+				 */
+				var ify = function() {
+				  return {
+					"link": function(t) {
+					  return t.replace(/(^|\s+)(https*\:\/\/\S+[^\.\s+])/g, function(m, m1, link) {
+						return ((m1 != '') ? ' ' : '') + '<a href=' + link + '>' + ((link.length > 25) ? link.substr(0, 24) + '...' : link) + '</a>';
+					  });
+					},
+					"at": function(t) {
+					  return t.replace(/(^|\s+)\@([a-zA-Z0-9_]{1,15})/g, function(m, m1, m2) {
+						return ((m1 != '') ? ' ' : '') + '@<a href="http://twitter.com/' + m2 + '">' + m2 + '</a>';
+					  });
+					},
+					"hash": function(t) {
+					  return t.replace(/(^|\s+)\#([a-zA-Z0-9_]+)/g, function(m, m1, m2) {
+						return ((m1 != '') ? ' ' : '') + '#<a href="http://search.twitter.com/search?q=%23' + m2 + '">' + m2 + '</a>';
+					  });
+					},
+					"clean": function(tweet) {
+					  return this.hash(this.at(this.link(tweet)));
+					}
+				  };
+				}();
+
+	  			 /* this is the end of the thing that makes the links links */
+	   
+	   
+	   
+	   
+	   
+	   
+	   		$("<div class='tweet'> </div>").html(ify.clean(this.text)).appendTo("#feed");
+
+
+
+			$("<div class='date'> </div>").html(this.created_at).appendTo("#feed");
 
 	   }); 
     });
@@ -35,13 +76,48 @@
   
 </script>
 
+<style> 
+
+body {
+	width:300px;
+	padding:10px 30px;
+	position:absolute;
+	left:500px;
+}
+
+#feed-name {
+	font-size: 21px;
+}
+
+#feed {
+	width:200px;
+}
+
+.tweet {
+	font-size:12px;
+	padding:5px 0 0 0;
+	color:black;
+}
+
+.tweet a {
+	color:#000;
+	text-decoration:underline;
+}
+
+.date {
+	padding:2px 0 5px 0;
+	border-bottom:solid 2px #DDD;
+	font-size:10px;
+
+}
+
+
+</style>
+
+
 <h1 id='feed-name'></h1>
 <div id='feed'>
 </div>
-
-
-
-
 
 </body>
 </html>
