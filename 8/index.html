@@ -8,6 +8,7 @@
         
         
     <script src='nivo-slider/jquery.nivo.slider.pack.js'> </script>
+    <script src='nivo-slider/jquery.nivo.slider.js'> </script>
     <link rel="stylesheet" href="nivo-slider/nivo-slider.css"/>
     <link rel="stylesheet" href="nivo-slider/themes/default/default.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="nivo-slider/themes/orman/orman.css" type="text/css" media="screen" />
@@ -22,6 +23,19 @@
     <script src="shuffleLetters/assets/js/jquery.shuffleLetters.js"></script>
     <script src="shuffleLetters/assets/js/script.js"></script>
 
+	<script src="roundabout/jquery.roundabout.min.js"></script>
+	<script>
+       $(document).ready(function() {
+          $('ul#myRoundabout').roundabout();
+		   $('ul').roundabout({
+			 minOpacity: 0.002, // invisible!
+			 minScale: 0.0002 // tiny!
+		  });
+		   
+		  $('ul').roundabout_setTilt(10,50);
+		  
+       });
+    </script>
 
 <script>
   $(document).ready(function() {
@@ -33,55 +47,53 @@
 		
 		
 		$("#feed-name").text(username + "'s Twitter feed.");
-        
-		$.each(data,function(idx) {
-       
-		/*this adds links to the hashtags and @ mentions */   
-						 /*
-				 * Twita@talinkahashifyer
-				 * http://www.dustindiaz.com
-				 * http://www.dustindiaz.com/basement/ify.html
-				 *
-				 * Copyright (c) 2009 Dustin Diaz
-				 * licensed under public BSD
-				 */
-				var ify = function() {
-				  return {
-					"link": function(t) {
-					  return t.replace(/(^|\s+)(https*\:\/\/\S+[^\.\s+])/g, function(m, m1, link) {
-						return ((m1 != '') ? ' ' : '') + '<a href=' + link + '>' + ((link.length > 25) ? link.substr(0, 24) + '...' : link) + '</a>';
-					  });
-					},
-					"at": function(t) {
-					  return t.replace(/(^|\s+)\@([a-zA-Z0-9_]{1,15})/g, function(m, m1, m2) {
-						return ((m1 != '') ? ' ' : '') + '@<a href="http://twitter.com/' + m2 + '">' + m2 + '</a>';
-					  });
-					},
-					"hash": function(t) {
-					  return t.replace(/(^|\s+)\#([a-zA-Z0-9_]+)/g, function(m, m1, m2) {
-						return ((m1 != '') ? ' ' : '') + '#<a href="http://search.twitter.com/search?q=%23' + m2 + '">' + m2 + '</a>';
-					  });
-					},
-					"clean": function(tweet) {
-					  return this.hash(this.at(this.link(tweet)));
-					}
-				  };
-				}();
-
-	  			 /* this is the end of the thing that makes the links links */
-	   
-	   
-	   
-	   
-	   
-	   
-	   		$("<div class='tweet'> </div>").html(ify.clean(this.text)).appendTo("#feed");
 
 
 
-			$("<div class='date'> </div>").html(this.created_at).appendTo("#feed");
-
-	   }); 
+		
+			$.each(data,function(idx) {
+		   
+			/*this adds links to the hashtags and @ mentions */   
+							 /*
+					 * Twita@talinkahashifyer
+					 * http://www.dustindiaz.com
+					 * http://www.dustindiaz.com/basement/ify.html
+					 *
+					 * Copyright (c) 2009 Dustin Diaz
+					 * licensed under public BSD
+					 */
+					var ify = function() {
+					  return {
+						"link": function(t) {
+						  return t.replace(/(^|\s+)(https*\:\/\/\S+[^\.\s+])/g, function(m, m1, link) {
+							return ((m1 != '') ? ' ' : '') + '<a href=' + link + '>' + ((link.length > 25) ? link.substr(0, 24) + '...' : link) + '</a>';
+						  });
+						},
+						"at": function(t) {
+						  return t.replace(/(^|\s+)\@([a-zA-Z0-9_]{1,15})/g, function(m, m1, m2) {
+							return ((m1 != '') ? ' ' : '') + '@<a href="http://twitter.com/' + m2 + '">' + m2 + '</a>';
+						  });
+						},
+						"hash": function(t) {
+						  return t.replace(/(^|\s+)\#([a-zA-Z0-9_]+)/g, function(m, m1, m2) {
+							return ((m1 != '') ? ' ' : '') + '#<a href="http://search.twitter.com/search?q=%23' + m2 + '">' + m2 + '</a>';
+						  });
+						},
+						"clean": function(tweet) {
+						  return this.hash(this.at(this.link(tweet)));
+						}
+					  };
+					}();
+	
+					 /* this is the end of the thing that makes the links links */
+		   
+		 
+		   
+				$("<div class='tweet'> </div>").html(ify.clean(this.text)).appendTo("#feed");
+	
+				$("<div class='date'> </div>").html(this.created_at).appendTo("#feed");
+	
+		   }); 
     });
   });
   
@@ -165,6 +177,28 @@ body {
 
 </style>
 
+<!-- rounabout styles -->
+<style>
+   .roundabout-holder { padding: 0; height: 5em; list-style: none; width:55%; }
+   .roundabout-moveable-item { 
+      height: 4em; 
+      width: 4em; 
+      cursor: pointer;
+      background-color: #ffc;
+      border: 1px solid #999;
+   }
+   .roundabout-in-focus { cursor: auto; }
+   
+   #myRoundabout img {
+	   border:
+	border: 1px solid #888;
+   }
+   
+   #theroundabout h1 {
+	   padding:20px 0 40px 0;
+   }
+
+</style>
 
 </head>
 <body>
@@ -178,7 +212,7 @@ body {
 
     
     
-	<div class="slider-wrapper theme-orman">
+	<article class="slider-wrapper theme-orman">
         <div class="ribbon"></div>
         <div id="slider" class="nivoSlider">
             <a href="http://www.flickr.com/photos/16313135@N00/2985116086/">
@@ -197,8 +231,26 @@ body {
                 <img src="images/summer.jpg" alt="Summer" title="Summer" /> 
             </a>
         </div>
-    </div>
+    </article>
 
+
+
+
+	<article id="theroundabout">
+    	<h1>Snowtober </h1>
+    	<ul id="myRoundabout">
+        	<li><img src="images/snowtober/cmartin.jpg" /> </li>
+            <li><img src="images/snowtober/fitek.jpg" /> </li>
+            <li><img src="images/snowtober/jdoody.jpg" /> </li>
+            <li><img src="images/snowtober/ko.jpg" /> </li>
+            <li><img src="images/snowtober/ko2.jpg" /> </li>
+            <li><img src="images/snowtober/linder.jpg" /> </li>
+            <li><img src="images/snowtober/lynnette.jpg" /> </li>
+            <li><img src="images/snowtober/marykate.jpg" /> </li> 
+        </ul>
+    
+    
+    </article>
     
 </section>
 
