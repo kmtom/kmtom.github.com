@@ -1,0 +1,35 @@
+
+
+/*----------------------------
+	Container & textbox
+-----------------------------*/
+
+
+#container{
+	color: #555;
+	font-size: 50px;
+	margin: 0 auto;
+	padding: 30px 0;
+	position:relative;
+
+	
+	font-family:sans-serif;
+	text-shadow:1px 1px 0 rgba(255,255,255,0.5);
+}
+
+#container:before{
+	content: "Katelyn's jQuery Playground";
+	font-size: 50px;
+	opacity: 0.15;
+	position: absolute;
+	text-shadow: 1px 1px 0 white;
+	font-family:sans-serif;
+}
+
+
+
+
+
+/*----------------------------
+	The Footer
+-----------------------------*/
