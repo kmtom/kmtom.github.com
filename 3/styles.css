@@ -2,7 +2,8 @@
 /* CSS Document */
 
 body {
-	width:700px;
+	width:100%;
+	max-width:1000px;
 	margin: 0 auto;
 	font-family:Tahoma, Geneva, sans-serif;
 }
@@ -14,11 +15,9 @@ body {
 }
 
 #page-header h1 {
-
 	font-family: "LeagueGothicRegular", Arial, sans-serif;
-	font-size:80px;
-	height: 80px;
-	width: 445px;
+	font-size:5em;
+	width: 100%;
 	background-repeat: no-repeat;
 	margin:0 auto;
 	text-transform:uppercase;
@@ -34,7 +33,7 @@ body {
 #page-header h1 #vs {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-weight: 600;
-	font-size:30px;
+	font-size: .4em;
 	display:inline-block;
 	font-style:italic;
 	position:relative;
@@ -47,7 +46,7 @@ body {
 
 #main-nav {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	font-size:20px;
+	font-size:1.em;
 	text-transform: uppercase;
 	margin-top:10px;
 	padding-top:3px;
@@ -58,7 +57,8 @@ body {
 	border-top-color: #000;
 	border-bottom-color: #000;
 	position:absolute;
-	width:700px;
+	width:100%;
+	max-width:1000px;
 	text-align:center;
 	height:24px;
 }
@@ -77,12 +77,18 @@ body {
 	padding:0 15px 0 2px;
 }
 
+#main-nav #last {
+	background-image:none;
+	background-repeat:none;
+}
+
 .content-sect {
-	width:300px;
+	width:46%;
+	max-width:450px;
 	margin-top: 15px;
-	margin-right: 25px;
 	margin-bottom: 20px;
-	margin-left: 25px;
+	margin-left:1%;
+	margin-right:1%;
 }
 
 
@@ -96,11 +102,20 @@ body {
 }
 
 .content-sect h1{
-	font-size:20px;
+	font-size:1.5em;
 	padding:10px 0;
 	
 }
 
+.content-sect img {
+	float:left;
+	padding-right:10px;
+}
+
+.content-sect p {
+	font-size:1em;
+	
+}
 
 #page-footer {
 	clear:both;
@@ -108,10 +123,11 @@ body {
 	border-top-style: solid;
 	border-top-color: #000;
 	padding-top: 10px;
-	padding-right: 25px;
+	padding-right: 1%;
 	padding-bottom: 30px;
-	padding-left: 25px;
-	font-size:12px;
+	padding-left: 1%;
+	font-size:1em;
+	width:98%;
 }
 #page-footer a{
 	text-decoration:none;
@@ -120,9 +136,26 @@ body {
 
 #page-footer #credit{
 	float:left;
+	width:47%;
 	
 }
 #page-footer #copyright {
 	float:right;
+	max-width:47%;
+	text-align:right;
 	
 }
+
+
+
+/* styles for a smaller screen to turn it into 2 columns */
+
+@media screen and (max-width:700px) {
+    body { font-size:0.8em; }
+    p { font-size:1.8em; }
+    .content-sect {width:98%; margin:0 1%; padding:10px 0; max-width:650px; }
+	#cat {float:none; padding:20px 0; }
+	.content-sect img {width:30%; max-width:200px; min-width:100px;}
+  }
+  
+  
