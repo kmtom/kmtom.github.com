@@ -4,8 +4,12 @@
 <head>
 <title>Thompsons Gymnastics Center - FunWithUs.com</title>
     <meta charset="utf-8" />
-<link href="reset.css" rel="stylesheet" type="text/css" />
-<link href="styles.css" rel="stylesheet" type="text/css" />
+    
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+    <script src="jquery.js"></script>
 
 </head>
 
@@ -64,6 +68,23 @@
         <p>Thompsons Gymnastics serving Chicopee, South Hadley, Holyoke, Granby and the surrounding communities since 1981.</p>
        </div>
  
+ <!-- this is the tabbed info about classes, its from http://www.red-team-design.com/css3-tabs-with-beveled-corners -->
+        <ul id="tabs">
+            <li><a href="#" title="tab1">One</a></li>
+            <li><a href="#" title="tab2">Two</a></li>
+            <li><a href="#" title="tab3">Three</a></li>
+            <li><a href="#" title="tab4">Four</a></li>
+        </ul>
+        
+        <div id="content">
+            <div id="tab1">One - content</div>
+            <div id="tab2">Two - content</div>
+            <div id="tab3">Three - content</div>
+            <div id="tab4">Four - content</div>
+        </div>    
+    
+    
+    
     
         <section id="photo-spread">
              <img src="images/4-3/1.JPG" width="140" alt="Preschooler sliding down slide." />
@@ -106,14 +127,17 @@
     
     
     </aside>
+    <div class="clear"></div>
 </div>
 
 
-<footer id="pagefooter"> 
-    Thompsons Gymnastics Center<br />
-    200 Old Lyman Rd. South Hadley, MA 01075<br />
-    P: 413-532-0374<br />
-    E: <a href="mailto:TGymnastic@aol.com">TGymnastic@aol.com</a>
+<footer id="footer-wrapper"> 
+	<div id="pagefooter">
+        Thompsons Gymnastics Center<br />
+        200 Old Lyman Rd. South Hadley, MA 01075<br />
+        P: 413-532-0374<br />
+        E: <a href="mailto:TGymnastic@aol.com">TGymnastic@aol.com</a>
+    </div>
 </footer>
 
 
