@@ -3,30 +3,33 @@
 
 /* overarching styles */
 	body {
-	  /* fallback */
-	  background-color: #1a82f7;
-	  background: url(images/linear_bg_2.png);
-	  background-repeat: repeat-x;
-	  
-	  /* Safari 4-5, Chrome 1-9 */
-	  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#1a82f7));
-	  
-	  /* Safari 5.1, Chrome 10+ */
-	  background: -webkit-linear-gradient(top, #1a82f7, #ffffff);
-	  
-	  /* Firefox 3.6+ */
-	  background: -moz-linear-gradient(top, #1a82f7, #ffffff);
-	  
-	  /* IE 10 */
-	  background: -ms-linear-gradient(top, #1a82f7, #ffffff);
-	  
-	  /* Opera 11.10+ */
-	  background: -o-linear-gradient(top, #1a82f7, #ffffff);
+		font-family: 'Lato', sans-serif;
+		
+		
+		/* this is so the background looks like a gradient */
+		/* fallback */
+			background-color: #1a82f7;
+			background: url(images/linear_bg_2.png);
+			background-repeat: repeat-x;
+		/* Safari 4-5, Chrome 1-9 */
+			background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#1a82f7));
+		/* Safari 5.1, Chrome 10+ */
+			background: -webkit-linear-gradient(top, #1a82f7, #ffffff);
+		/* Firefox 3.6+ */
+			background: -moz-linear-gradient(top, #1a82f7, #ffffff);
+		/* IE 10 */
+			background: -ms-linear-gradient(top, #1a82f7, #ffffff);
+		/* Opera 11.10+ */
+			background: -o-linear-gradient(top, #1a82f7, #ffffff);
 	}
 
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Fjord One', serif;
+	}
 
-
-
+	p {
+		padding-bottom:2px;	
+	}
 
 
 /* header styles */
@@ -40,7 +43,14 @@
 		margin:0 auto;
 		height:55px;
 		background-color:#fff;
-		padding:0px 5px;
+		padding:0px 10px;
+		-moz-border-radius: 2px 2px 0 0;
+		-webkit-border-radius: 2px 2px 0 0;
+		border-radius: 2px 2px 0 0;
+		-moz-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+		-webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+		box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+	
 	}
 	
 	#site-header h1 {
@@ -119,8 +129,18 @@
 	#mainsection {
 		width:960px;
 		margin:0 auto;
-		background-color:#EEE;
-		padding:40px 5px 10px 5px;
+		padding:40px 10px 15px 10px;
+		
+		background-color: #fff;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+		background-image: -webkit-linear-gradient(top, #fff, #ddd);
+		background-image:    -moz-linear-gradient(top, #fff, #ddd);
+		background-image:     -ms-linear-gradient(top, #fff, #ddd);
+		background-image:      -o-linear-gradient(top, #fff, #ddd);
+		background-image:         linear-gradient(top, #fff, #ddd);
+		-moz-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+		-webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+		box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
 		
 	}
 
@@ -155,6 +175,7 @@
 		padding: 0;
 		float: left;
 	}
+	
 	
 	#tabs a {
 		-moz-box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
@@ -217,6 +238,19 @@
 		padding: 30px;
 	}
 	
+	#content p {
+		line-height:1.2em;
+	}
+	
+	#content ul {
+		list-style:disc;
+		padding-left:15px;
+	}
+	
+	#content li {
+		padding-bottom:5px;
+	}
+
 	/* Remove the rule below if you want the content to be "organic" */
 	#content div {
 		height: 150px;
@@ -273,6 +307,7 @@
 		height:100px;
 		clear:both;
 		width:100%;
+		margin-top:-2px;
 	}
 	
 	
