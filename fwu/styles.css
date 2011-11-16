@@ -162,12 +162,23 @@
 
 /* tabbed class info scetion styles */
 
+	#classtabs {
+		padding: 10px 5px 10px 0;
+	}
+	
+	#classtabs h2 {
+		font-size:25px;
+		padding: 2px 0 10px 0;
+	}
+
+
 	#tabs {
 	  overflow: auto;
 	  width: 100%;
 	  list-style: none;
 	  margin: 0;
 	  padding: 0;
+	  font-family: 'Fjord One', serif;
 	}
 	
 	#tabs li {
@@ -190,7 +201,7 @@
 		text-shadow: 0 1px 0 rgba(0,0,0,.5);
 		color: #fff;
 		float: left;
-		font: bold 12px/35px 'Lucida sans', Arial, Helvetica;
+		font: bold 15px/35px 'Fjord One', serif;
 		height: 35px;
 		padding: 0 30px;
 		text-decoration: none;
@@ -210,12 +221,12 @@
 	}
 	
 	#tabs #current a {
-		background: #fff;
-		background:    -moz-linear-gradient(220deg, transparent 10px, #fff 10px);
-		background:    -webkit-linear-gradient(220deg, transparent 10px, #fff 10px);
-		background:     -ms-linear-gradient(220deg, transparent 10px, #fff 10px);
-		background:      -o-linear-gradient(220deg, transparent 10px, #fff 10px);
-		background:         linear-gradient(220deg, transparent 10px, #fff 10px);
+		background: #cfc;
+		background:    -moz-linear-gradient(220deg, transparent 10px, #cfc 10px);
+		background:    -webkit-linear-gradient(220deg, transparent 10px, #cfc 10px);
+		background:     -ms-linear-gradient(220deg, transparent 10px, #cfc 10px);
+		background:      -o-linear-gradient(220deg, transparent 10px, #cfc 10px);
+		background:         linear-gradient(220deg, transparent 10px, #cfc 10px);
 		text-shadow: none;
 		color: #333;
 	}
@@ -235,11 +246,12 @@
 		-moz-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
 		-webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
 		box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
-		padding: 30px;
+		padding: 15px 30px;
+		font-size:15px;
 	}
 	
 	#content p {
-		line-height:1.2em;
+		line-height:1.3em;
 	}
 	
 	#content ul {
@@ -253,7 +265,7 @@
 
 	/* Remove the rule below if you want the content to be "organic" */
 	#content div {
-		height: 150px;
+		height: 120px;
 	}
 
 
