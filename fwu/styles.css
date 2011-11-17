@@ -201,7 +201,7 @@
 		text-shadow: 0 1px 0 rgba(0,0,0,.5);
 		color: #fff;
 		float: left;
-		font: bold 15px/35px 'Fjord One', serif;
+		font: bold 15px/35px 'Lato', sans-serif;
 		height: 35px;
 		padding: 0 30px;
 		text-decoration: none;
@@ -234,12 +234,12 @@
 	#content
 	{
 		background-color: #fff;
-		background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+/*		background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
 		background-image: -webkit-linear-gradient(top, #fff, #ddd);
 		background-image:    -moz-linear-gradient(top, #fff, #ddd);
 		background-image:     -ms-linear-gradient(top, #fff, #ddd);
 		background-image:      -o-linear-gradient(top, #fff, #ddd);
-		background-image:         linear-gradient(top, #fff, #ddd);
+		background-image:         linear-gradient(top, #fff, #ddd); */
 		-moz-border-radius: 0 2px 2px 2px;
 		-webkit-border-radius: 0 2px 2px 2px;
 		border-radius: 0 2px 2px 2px;
@@ -251,12 +251,12 @@
 	}
 	
 	#content p {
-		line-height:1.3em;
+		line-height:1.15em;
 	}
 	
 	#content ul {
 		list-style:disc;
-		padding-left:15px;
+		padding-left:20px;
 	}
 	
 	#content li {
@@ -265,11 +265,23 @@
 
 	/* Remove the rule below if you want the content to be "organic" */
 	#content div {
-		height: 120px;
+		height: 140px;
 	}
 
+/*the end of the tabbed info section styles */
 
 
+
+
+
+
+	#photo-spread {
+		width:100%;		
+	}
+	
+	#photo-spread img {
+		padding:5px 11px;	
+	}
 
 
 
@@ -280,36 +292,57 @@
 		width:270px; 
 	}
 
-	#announcements {
-		border: 1px solid #06C;
+	.rightbox {
 		margin-top: 5px;
 		margin-right: -1px;
-		margin-bottom: 5px;
+		margin-bottom: 7px;
 		margin-left: -1px;
-		padding-top: 5px;
-		padding-bottom: 5px;
+		padding: 5px 10px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		
+	}
+
+	.rightbox h1 {
+		font-size: 16px;
+		padding-top:7px;
+		padding-bottom:4px;
+		line-height:1.3em;
+
+	}
+	
+	.rightbox h2 {
+		font-size:14px;
+		font-weight:bold;
+		padding:10px 0 5px 0;
+	}
+	
+	.rightbox h3 {
+		font-size:14px;
+		margin-top:-5px;
+		margin-bottom:5px;
+	}
+	
+	.rightbox p {
+		font-size:14px;
+		padding-left:15px;
+	}
+
+
+	#announcements {
+		border: 2px solid #06C;
+
 	}
 	
 	#events {
-		border: 1px solid #06C;
-		margin-top: 5px;
-		margin-right: -1px;
-		margin-bottom: 5px;
-		margin-left: -1px;
-		padding-top: 5px;
-		padding-bottom: 5px;
+		border: 2px solid #06C;
 	}
 	
-	#facebook {
-		border: 1px solid #06C;
-		margin-top: 5px;
-		margin-right: -1px;
-		margin-bottom: 5px;
-		margin-left: -1px;
-		padding-top: 5px;
-		padding-bottom: 5px;
+	#calendar-link {
+		float:right;
+		padding-top:5px;
+		font-size:15px;
 	}
-	
 
 
 /* footer styles */
