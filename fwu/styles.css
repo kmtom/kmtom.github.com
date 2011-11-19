@@ -39,21 +39,28 @@
 /* header styles */
 
 	#header-wrapper {
-		height:60px;
+		height:110px;
+		width:980px;
+		margin:0 auto;
+		
+		background-color: #fff;
+		
+		-moz-border-radius: 2px 2px 0 0;
+		-webkit-border-radius: 2px 2px 0 0;
+		border-radius: 2px 2px 0 0;
+
+		-moz-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+		-webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+		box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+
 	}
 
 	#site-header {
 		width:960px;
 		margin:0 auto;
 		height:60px;
-		background-color:#fff;
 		padding:0px 10px;
-		-moz-border-radius: 2px 2px 0 0;
-		-webkit-border-radius: 2px 2px 0 0;
-		border-radius: 2px 2px 0 0;
-		-moz-box-shadow: 0 0px 2px #000, 0 -1px 0 #fff inset;
-		-webkit-box-shadow: 0 0px 2px #000, 0 -1px 0 #fff inset;
-		box-shadow: 0 0px 2px #000, 0 -1px 0 #fff inset;
+
 	
 	}
 	
@@ -74,7 +81,7 @@
 	#top-contact {
 		float:right;
 		padding-top:3px;
-		color:#963;
+		color:#000;
 		text-align:right;
 	}
 	
@@ -91,8 +98,7 @@
 
 /* navigation styles */
 	#menu-wrapper {
-		background-color:#963;
-		height:50px;
+		height:53px;
 		margin-bottom:20px;
 		clear:both;
 		position:relative;
@@ -103,7 +109,8 @@
 	#main-menu {
 		width:960px;
 		padding:0 10px;
-		height:29px;
+		height:28px;
+		border-bottom:solid 2px #000;
 	}
 	
 	#main-menu ul {
@@ -116,7 +123,7 @@
 		float:left;
 		text-transform:uppercase;
 		dislpay:inline;
-		margin:0 1px;
+		margin:0 4px;
 	}
 	
 	#main-menu li a {
@@ -126,15 +133,7 @@
 	text-decoration:none;
 	padding: 5px 20px;
 	text-shadow: #000 2px 2px 2px;
-	border-top-width: medium;
-	border-right-width: medium;
-	border-left-width: medium;
-	border-top-style: solid;
-	border-right-style: solid;
-	border-left-style: solid;
-	border-top-color: #000;
-	border-right-color: #000;
-	border-left-color: #000;
+	border: solid 2px #000;
 	}
 	
 	#main-menu li a:hover {
@@ -156,14 +155,10 @@
 	.blue {color:DodgerBlue;}
 	.purple {color:BlueViolet;}
 
-	#main-menu li a .current {
-		color:#000;
-		text-shadow: #fcf 2px 2px 2px;
-	}
 
 	#submain-menu {
 		width:980px;
-		height:35px;
+		height:32px;
 	}
 	
 	.home {
@@ -186,7 +181,7 @@
 	#mainsection {
 		width:960px;
 		margin:0 auto;
-		padding:60px 10px 15px 10px;
+		padding:20px 10px 15px 10px;
 		
 		background-color: #fff;
 		background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
