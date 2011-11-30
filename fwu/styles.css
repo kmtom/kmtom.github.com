@@ -35,6 +35,13 @@
 		padding-bottom:2px;	
 	}
 
+	#bigwrapper {
+		-moz-box-shadow: 0 2px 2px #000, 0 1px 0 #fff;
+		-webkit-box-shadow: 0 2px 2px #000, 0 1px 0 #fff;
+		box-shadow: 0 2px 2px #000, 0 1px 0 #fff;
+		width:980px;
+		margin:0 auto;
+	}
 
 /* header styles */
 
@@ -49,9 +56,7 @@
 		-webkit-border-radius: 2px 2px 0 0;
 		border-radius: 2px 2px 0 0;
 
-		-moz-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
-		-webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
-		box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+
 
 	}
 
@@ -156,23 +161,23 @@
 	.purple {color:BlueViolet;}
 
 
-	#submain-menu {
+	.submain-menu {
 		width:980px;
 		height:32px;
 	}
 	
-	#submain-menu ul{
+	.submain-menu ul{
 
 	}
 	
-	#submain-menu li {
+	.submain-menu li {
 		display:inline;	
 		text-transform:uppercase;
 		margin:0 4px;
 		float:left;
 
 	}
-	#submain-menu li a {
+	.submain-menu li a {
 		display:block;
 		font-size:16px;
 		color:black;
@@ -183,7 +188,7 @@
 	
 	
 	
-	.homesubnav {
+	#homesubnav {
 		height:32px;
 		background: #1e90ff; /* Old browsers */
 		background: -moz-linear-gradient(top,  #1e90ff 0%, #ffffff 100%); /* FF3.6+ */
@@ -196,12 +201,12 @@
 		
 
 	}
-	.homesubnav ul {
+	#homesubnav ul {
 	/*	display:none; */
 		margin-left:10px;
 	} 
 
-	.classessubnav {
+	#classessubnav {
 		height:32px;
 		background: #4E9258; /* Old browsers */
 		background: -moz-linear-gradient(top,  #4E9258 0%, #ffffff 100%); /* FF3.6+ */
@@ -214,12 +219,12 @@
 		
 
 	}
-	.classessubnav ul {
+	#classessubnav ul {
 	/*	display:none; */
 		margin-left:110px;
 	} 	
 
-	.programsubnav {
+	#programsubnav {
 		height:32px;
 		background: #FF3333; /* Old browsers */
 		background: -moz-linear-gradient(top,  #FF3333 0%, #ffffff 100%); /* FF3.6+ */
@@ -232,11 +237,11 @@
 		
 
 	}
-	.programsubnav ul {
+	#programsubnav ul {
 		display:none; 
 	} 
 
-	.calendarsubnav {
+	#calendarsubnav {
 		height:32px;
 		background: #FFD700; /* Old browsers */
 		background: -moz-linear-gradient(top,  #FFD700 0%, #ffffff 100%); /* FF3.6+ */
@@ -249,11 +254,11 @@
 		
 
 	}
-	.calendarsubnav ul {
+	#calendarsubnav ul {
 		display:none; 
 	} 
 
-	.aboutsubnav {
+	#aboutsubnav {
 		height:32px;
 		background: #1e90ff; /* Old browsers */
 		background: -moz-linear-gradient(top,  #FFA500 0%, #ffffff 100%); /* FF3.6+ */
@@ -266,12 +271,12 @@
 		
 
 	}
-	.aboutsubnav ul {
+	#aboutsubnav ul {
 	/*	display:none; */
 		margin-left:400px;
 	} 
 
-	.teamsubnav {
+	#teamsubnav {
 		height:32px;
 		background: #1e90ff; /* Old browsers */
 		background: -moz-linear-gradient(top,  #8A2BE2 0%, #ffffff 100%); /* FF3.6+ */
@@ -284,7 +289,7 @@
 		
 
 	}
-	.teamsubnav ul {
+	#teamsubnav ul {
 		display:none;
 	} 
 
@@ -301,9 +306,6 @@
 		background-image:     -ms-linear-gradient(top, #fff, #ddd);
 		background-image:      -o-linear-gradient(top, #fff, #ddd);
 		background-image:         linear-gradient(top, #fff, #ddd);
-		-moz-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
-		-webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
-		box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
 		
 	}
 
@@ -413,9 +415,9 @@
 		-moz-border-radius: 0 2px 2px 2px;
 		-webkit-border-radius: 0 2px 2px 2px;
 		border-radius: 0 2px 2px 2px;
-		-moz-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
-		-webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
-		box-shadow: 0 2px 2px #000, 0 -1px 0 #fff inset;
+		-moz-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff;
+		-webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff;
+		box-shadow: 0 2px 2px #000, 0 -1px 0 #fff;
 		padding: 15px 20px;
 		font-size:15px;
 	}
@@ -521,18 +523,24 @@
 /* footer styles */
 
 	#footer-wrapper {
-		background-color:#963;
-		height:100px;
+		width:980px;
+		margin:0 auto;
+
+		margin-top:-3px;
+		background-color: #ddd;
+
+		height:80px;
 		clear:both;
-		width:100%;
-		margin-top:-2px;
 	}
 	
 	
 	#pagefooter {
 		width:960px;
-		margin:0 auto;
+		padding:0 10px;
+		background-color: #ddd;		
 		padding-top:10px;
+		font-size:14px;
+
 	}
 
 

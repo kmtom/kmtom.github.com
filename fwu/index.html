@@ -20,7 +20,7 @@
 </head>
 
 <body>
-  
+<div id="bigwrapper">
 
 <header id='header-wrapper'>
     <div id="site-header">
@@ -42,22 +42,22 @@
     <div id='menu-wrapper'>
         <nav id='main-menu'>
             <ul>
-                <li class="bgblue"><a href="#" style="color:#000; text-shadow: #fcf 2px 2px 2px; border-bottom-color:dodgerblue;"> Home </a></li>
-                <li class="bggreen"><a href="#"> Classes &#9662;</a></li>
-                <li class="bgred"><a href="#"> Special Programs </a></li>
-                <li class="bgyellow"><a href="#"> Calendar </a></li>
-                <li class="bgorange"><a href="#"> About TGC &#9662; </a></li>
-                <li class="bgpurple"><a href="#"> Competitive Team </a></li>
+                <li class="bgblue"><a href="#" data-subnav='homesubnav' style="color:#000; text-shadow: #fcf 2px 2px 2px; border-bottom-color:dodgerblue;"> Home </a></li>
+                <li class="bggreen"><a href="#" data-subnav='classessubnav'> Classes &#9662;</a></li>
+                <li class="bgred"><a href="#" data-subnav='programsubnav'> Special Programs </a></li>
+                <li class="bgyellow"><a href="#" data-subnav='calendarsubnav'> Calendar </a></li>
+                <li class="bgorange"><a href="#" data-subnav='aboutsubnav'> About TGC &#9662; </a></li>
+                <li class="bgpurple"><a href="#" data-subnav='teamsubnav'> Competitive Team </a></li>
             </ul>    
         </nav>
 
-        <nav id="submain-menu" class="homesubnav">
+        <nav id="homesubnav" class="submain-menu selected">
  
         </nav>
         
-<!--  I will use PHP to call the correct subnav in to the page
-        <nav id="submain-menu" class="classessubnav">
-        	<ul class="classessubnav">
+
+        <nav id="classessubnav" class="submain-menu">
+        	<ul id="classessubnav">
         		<li><a href="#">2 Year-Old</a></li>
                 <li><a href="#">Preschool</a></li>
                 <li><a href="#">Kinder</a></li>
@@ -66,17 +66,17 @@
         	</ul>
         </nav>
         
-        <nav id="submain-menu" class="programsubnav">
+        <nav id="programsubnav" class="submain-menu">
        
         </nav>
         
-        <nav id="submain-menu" class="calendarsubnav">
+        <nav id="calendarsubnav" class="submain-menu">
        
         </nav>        
         
         
-        <nav id="submain-menu" class="aboutsubnav">
-       		<ul class="aboutsubnav">
+        <nav id="aboutsubnav" class="submain-menu">
+       		<ul id="aboutsubnav">
             	<li><a href="#">Facility</a></li>
                 <li><a href="#">Newsletters</a></li>
                 <li><a href="#">Forms &amp; Policies</a></li>
@@ -84,15 +84,48 @@
             </ul>
         </nav>
         
-        <nav id="submain-menu" class="teamsubnav">
+        <nav id="teamsubnav" class="submain-menu">
         
-        </nav>  -->
+        </nav>  
         
         
         <div class="clear"></div>
     </div> <!-- end #menu-wrapper -->
   
 </header>
+
+<script>
+ $(function() {
+		$(".submain-menu").hide();
+		$(".submain-menu.selected").show();
+		var clearTimer;
+        $("#main-menu a").hover(function() {
+				clearTimeout(clearTimer);
+				
+			 	$(".submain-menu").hide();
+				var navShow = $(this).attr('data-subnav');
+				$("#" + navShow).show();
+			}, function() {
+				clearTimer = setTimeout(function() {
+									$(".submain-menu").hide();
+									$(".submain-menu.selected").show();
+								},500);
+			  	
+			});
+		
+		$(".submain-menu").hover(function() {
+										clearTimeout(clearTimer);  
+										  
+										  },
+								 function() {
+									 clearTimer = setTimeout(function() {
+									$(".submain-menu").hide();
+									$(".submain-menu.selected").show();
+								},500);
+								 });
+			
+			});
+</script>
 
 
 
@@ -241,7 +274,7 @@
 
 
 
-
+</div>
 
 
 </body>
