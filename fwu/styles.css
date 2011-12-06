@@ -28,7 +28,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Fjord One', serif;
+		font-family: 'Arvo', serif;
 	}
 
 	p {
@@ -72,6 +72,7 @@
 	#site-header h1 {
 		float:left;
 		padding-top:10px;
+		font-family: 'Fjord One', serif;
 	}
 	
 	#site-header h1 a {
@@ -131,14 +132,14 @@
 	}
 	
 	#main-menu li a {
-	display:block;
-	font-size:16.5px;
-	height:20px;
-	color:white;
-	text-decoration:none;
-	padding: 5px 17px;
-	text-shadow: #000 2px 2px 2px;
-	border: solid 2px #000;
+		display:block;
+		font-size:16.5px;
+		height:20px;
+		color:#fff;
+		text-decoration:none;
+		padding: 5px 17px;
+		text-shadow: #000 2px 2px 2px;
+		border: solid 2px #000;
 	}
 	
 	#main-menu li a:hover {
@@ -185,6 +186,11 @@
 		padding: 5px 10px;
 		text-shadow: #fff 2px 2px 2px;
 	}
+	
+	.submain-menu li a:hover {
+		color:#fff;
+		text-shadow: #000 2px 2px 2px;
+}
 	
 	
 	
@@ -324,9 +330,58 @@
 	}
 	
 	#philosophy {
-	font-size:17px;
-	line-height: 20px;
+		font-size:17px;
+		line-height: 20px;
 	}
+
+	
+/* register button */
+	#registerbutton {
+		float:right;
+		padding-top:10px;
+		
+	}
+
+	
+	.button {
+		border-top: 1px solid #D98C00;
+		
+		background: #FFA500;
+		background: -webkit-gradient(linear, left top, left bottom, from(#FFA500), to(#D98C00));
+		background: -moz-linear-gradient(top,  #FFA500,  #D98C00);
+		
+		padding: 5px 10px;
+		
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 8px;
+		
+		-webkit-box-shadow: black 0 1px 0;
+		-moz-box-shadow: black 0 1px 0;
+		box-shadow: black 0 1px 0;
+		
+		text-shadow: rgba(0,0,0,.4) 0 2px 0;
+		
+		color: white;
+		font-size: 16px;
+		text-decoration: none; 
+		vertical-align: middle;
+	}
+	
+	.button:hover {
+		border-top-color: #C27D00;
+		background: #C27D00;
+		color: #fff; 
+	}
+	
+	.button:active {
+		border-top-color: forestgreen;
+		background: forestgreen;
+		outline: 0;
+	}
+	
+	
+	
 
 
 
@@ -334,6 +389,7 @@
 
 	#classtabs {
 		padding: 10px 5px 10px 0;
+		clear:both;
 	}
 	
 	#classtabs h2 {
@@ -348,7 +404,7 @@
 	  list-style: none;
 	  margin: 0;
 	  padding: 0;
-	  font-family: 'Fjord One', serif;
+	  font-family: 'Arvo', serif;
 	}
 	
 	#tabs li {
@@ -368,10 +424,13 @@
 		text-shadow: 0 1px 0 rgba(255,255,255,.5);
 		color: #4a4a4a;
 		float: left;
-		font: bold 15px/30px 'Lato', sans-serif;
+		font:  15px/30px 'Arvo', serif;
 		height: 30px;
 		padding: 0 20px;
 		text-decoration: none;
+		-moz-box-shadow: -2px 0 0 rgba(0, 0, 0, .2);
+		-webkit-box-shadow: -2px 0 0 rgba(0, 0, 0, .2);
+		box-shadow: -2px 0 0 rgba(0, 0, 0, .2);
 	}
 	
 	#tabs a:hover {
@@ -390,9 +449,9 @@
 	}
 	
 	#tabs #current a {
-		-moz-box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
-		-webkit-box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
-		box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
+		-moz-box-shadow: -2px 0 0 rgba(0, 0, 0, .2);
+		-webkit-box-shadow: -2px 0 0 rgba(0, 0, 0, .2);
+		box-shadow: -2px 0 0 rgba(0, 0, 0, .2);
 		background: #4E9258;
 		background:    -moz-linear-gradient(220deg, transparent 10px, #4E9258 10px);
 		background:    -webkit-linear-gradient(220deg, transparent 10px, #4E9258 10px);
@@ -446,14 +505,37 @@
 
 
 
+/* photo spread stuff: */
 
 	#photo-spread {
 		width:100%;		
+		padding-bottom:5px;
 	}
 	
 	#photo-spread img {
 		padding:5px 11px;	
 	}
+
+
+
+/* video are styles */
+
+
+	#video {
+		float:left;
+		width:340px;
+		padding: 5px 0;
+	}
+
+
+/* register box styles */
+
+	#registerbox {
+		float:right;
+		width:310px;
+		padding:5px 10px 5px 0;
+	}
+
 
 
 
@@ -525,6 +607,8 @@
 	#footer-wrapper {
 		width:980px;
 		margin:0 auto;
+		height:100px;
+		clear:both;
 		margin-top:-3px;
 		
 		background: #dddddd; /* Old browsers */
@@ -536,8 +620,6 @@
 		background: linear-gradient(top,  #dddddd 0%,#777777 50%,#444444 100%); /* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#444444',GradientType=0 ); /* IE6-9 */
 
-		height:90px;
-		clear:both;
 	}
 	
 	
@@ -545,10 +627,16 @@
 		width:960px;
 		padding:20px 10px 0 10px;
 		font-size:14px;
+		line-height:16px;
 		color:#EEE;
 	}
+	
 	#pagefooter h1 {
-		color:#000;	
+		padding-top:5px;
+	}
+	
+	#pagefooter a {
+		color: #fff;	
 	}
 
 
