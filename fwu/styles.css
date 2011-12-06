@@ -390,6 +390,7 @@
 	#classtabs {
 		padding: 10px 5px 10px 0;
 		clear:both;
+		height:240px;
 	}
 	
 	#classtabs h2 {
@@ -535,6 +536,28 @@
 		width:310px;
 		padding:5px 10px 5px 0;
 	}
+	
+	#registerbox h2 {
+		padding:3px 0;	
+		font-size:16px;
+	}
+	
+	#registerbox ul {
+		list-style-position:inside;
+		list-style-type: square;
+		padding:5px;
+	}
+	#registerbox li {
+		padding:2px 0;	
+	}
+	
+	#registerbox a{
+		color:#D98C00;
+	}
+	#registerbox p{
+		font-size:14px;	
+	}
+
 
 
 
@@ -565,14 +588,16 @@
 
 	}
 	
+	.rightbox h1 a {
+		color:black;	
+	}
+	
 	.rightbox h2 {
 		font-size:14px;
 		font-weight:bold;
 		padding:10px 0 5px 0;
 	}
-	.rightbox h2 a {
-		color:black;	
-	}
+
 	
 	.rightbox h3 {
 		font-size:14px;
